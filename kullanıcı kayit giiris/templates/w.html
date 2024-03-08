@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> başarılıyla giriş yaptı </p>
+        <p> Giriş yapan kullanıcı ad   ve   şifreye göre </p>
+        <p> Bir  sayfa oluşturalim : </p>
+
+
+        
+        {% for product in populer_products %}
+        <h1>Hoş Geldiniz, {{ username }}!</h1>
+        <p> şifreniz : {{password}}</p>
+        {% endfor%}
+    </body>
+</html>

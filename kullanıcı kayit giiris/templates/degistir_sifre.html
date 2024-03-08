@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifre Değiştirme</title>
+</head>
+<body>
+    {% if success_message %}
+        <p style="color: green;">{{ success_message }}</p>
+    {% endif %}
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+
+    <h2>Şifre Değiştirme Formu</h2>
+    <form action="{{ url_for('degistir_sifre') }}" method="post">
+        <label for="current_username">Mevcut Kullanıcı Adı:</label>
+        <input type="text" name="current_username" required><br>
+
+        <label for="current_password">Mevcut Şifre:</label>
+        <input type="password" name="current_password" required><br>
+
+        <label for="new_password">Yeni Şifre:</label>
+        <input type="password" name="new_password" required><br>
+
+        <input type="submit" value="Şifreyi Değiştir">
+    </form>
+
+
+
+<a href="{{ url_for('success') }}"> Ana Sayfaya dön </a>
+
+<a href="{{ url_for('login') }}"> ÇIKIŞ YAP </a>
+
+    </body>
+</html>

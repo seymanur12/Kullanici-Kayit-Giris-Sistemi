@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> başarılıyla giriş yaptı </p>
+        <p> Giriş yapan kullanıcı ad   ve   şifreye göre </p>
+        <p> Bir  sayfa oluşturalim : </p>
+
+
+
+{{username}}
+{{password}}
+
+
+
+ <a href="{{ url_for('degistir_sifre') }}"> ŞİFREYİ DEĞİŞTİR  </a><!-- fonksiyonun adı yazılıyor buraya-->
+<a href="{{ url_for('hesap_sil') }}">  HESABI SİL  </a>
+
+
+<a href="{{ url_for('login') }}"> ÇIKIŞ YAP </a>
+
+    </body>
+</html>

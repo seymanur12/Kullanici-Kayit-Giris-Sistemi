@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Sil</title>
+</head>
+<body>
+    {% if success_message %}
+        <p style="color: green;">{{ success_message }}</p>
+    {% endif %}
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+
+    <h2>Hesap Silme</h2>
+    <form action="{{ url_for('hesap_sil') }}" method="post">
+        <label for="username">Kullanıcı Adı:</label>
+                             <input type="text" name="username" required><br>
+
+        <label for="password">Şifre:</label>
+                            <input type="password" name="password" required><br>
+
+        <input type="submit" value="Hesabı Sil">
+    </form>
+</body>
+</html>
